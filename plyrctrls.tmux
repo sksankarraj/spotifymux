@@ -9,7 +9,7 @@ greeter_show() {
 }
 
 # Bind a key to trigger the greeter (e.g., Ctrl-g)
-tmux bind-key -n C-k run-shell "$CURRENT_DIR/plyrctrls.tmux show"
+tmux bind-key -n C-b run-shell "$CURRENT_DIR/plyrctrls.tmux show"
 
 # Handle plugin commands (optional, for flexibility)
 case "$1" in
