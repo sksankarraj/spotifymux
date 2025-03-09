@@ -8,6 +8,8 @@ greeter_show() {
     tmux split-window -h "echo 'Hello, $(whoami)! The time is $(date "+%H:%M:%S").' && sleep 5"
 }
 
+set -g status-left "#(date '+%Y-%m-%d %H:%M:%S')"
+
 # Bind a key to trigger the greeter (e.g., Ctrl-g)
 tmux bind-key -n C-b run-shell "$CURRENT_DIR/plyrctrls.tmux show"
 
